@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/addData" method="post">
+        <input type="text"  placeholder="Enter Your Book Name" name="Bookname">
+        <input type="text"  placeholder="Enter Your Book Auther" name="BookAuther">
+        <input type="text"  placeholder="Enter Your Book Year" name="BookYear">
+        <input type="text"  placeholder="Enter Your Book Price" name="BookPrice">
+       
+        <button type="submit">Submit</button>
+    </form>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>BookName</th>
+            <th>BookAuther</th>
+            <th>BookYear</th>
+            <th>BookPrice</th>
+            <th colspan="2">Action</th>
+        </tr>
+
+        <% data.map((e,i)=>{%>
+        
+        <tr>
+            <td><%=e.BookName%></td>
+            <td><%=e.BookAuther%></td>
+            <td><%=e.BookYear%></td>
+            <td><%=e.BookPrice%></td>
+            <td>
+                <button><a href="/editData?id=<%=e.id%>">Edit</a></button>
+            </td>
+            <td>
+                <button><a href="/deleteData?id=<%=e.id%>">Delete</a></button>
+            </td>
+        </tr>
+        
+        <%})%>
+    </table>
+</body>
+</html>

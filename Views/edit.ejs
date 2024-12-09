@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/updateData" method="post">
+        <input type="text" value="<%=singledata.id%>"  name="id" hidden>
+        <input type="text" value="<%=singledata.Bookname%>" placeholder="Enter Your Book Name" name="Bookname">
+        <input type="text" value="<%=singledata.BookAuther%>" placeholder="Enter Your Book Auther" name="BookAuther">
+        <input type="text" value="<%=singledata.BookYear%>" placeholder="Enter Your Book Year" name="BookYear">
+        <input type="text" value="<%=singledata.BookPrice%>" placeholder="Enter Your Book Price" name="BookPrice">
+       
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
